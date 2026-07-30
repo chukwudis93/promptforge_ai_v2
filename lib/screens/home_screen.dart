@@ -155,3 +155,22 @@ class _HomeScreenState extends State<HomeScreen> {
                             trailing: const Icon(Icons.chevron_right),
                             onTap: () => _openDraft(p),
                           ),
+                        )),
+                  ],
+                  const SizedBox(height: 40),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  @override
+  void dispose() {
+    _storyController.dispose();
+    _titleController.dispose();
+    super.dispose();
+  }
+}
